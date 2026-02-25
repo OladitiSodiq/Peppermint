@@ -91,6 +91,23 @@ npm run dev
 
 ------------------------------------------------------------------------
 
+## Rate Limiting
+
+- To prevent abuse and ensure fair usage, the API implements per-user rate limiting.
+
+- Policy
+
+- Each authenticated user can make 5 requests per hour
+
+- The rate limit window resets automatically after 1 hour
+
+- If the limit is exceeded, the API returns: Rate Limit Exceeded
+
+
+## Audit Logging
+
+- All authenticated requests are logged for monitoring and traceability
+- View Audit Logs {{url}}/audit/logs
 
 ##  License
 
