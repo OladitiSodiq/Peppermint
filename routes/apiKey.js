@@ -1,5 +1,5 @@
 import express from "express";
-import { ApiKeyController } from "../controllers/apikey.js";
+import { ApiKeyController } from "../controllers/apiKey.js";
 import { authMiddleware } from "../middlewares/auth.js";
 import {
   validateCreateApiKey
