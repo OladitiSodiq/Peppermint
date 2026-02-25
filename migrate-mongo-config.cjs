@@ -3,10 +3,10 @@
 const config = {
   mongodb: {
     // TODO Change (or review) the url to your MongoDB:
-    url: "mongodb://localhost:27017",
+    url: "mongodb+srv://oladitisodiq_db_user:wJyOChOdOK314SNg@cluster0.7ds1ajs.mongodb.net/",
 
     // TODO Change this to your database name:
-    databaseName: "YOURDATABASENAME",
+    databaseName: "test",
 
     options: {
       // useNewUrlParser: true, // (not needed anymore in mongodb driver 4.x+)
@@ -29,14 +29,15 @@ const config = {
   lockTtl: 0,
 
   // The file extension to create migrations and search for in migration dir 
-  migrationFileExtension: ".js",
+  migrationFileExtension: ".cjs",
 
   // Enable the algorithm to create a checksum of the file contents and use that in the comparison to determine
   // if the file should be run.  Requires that scripts are coded to be run multiple times.
   useFileHash: false,
 
   // Don't change this, unless you know what you're doing
-  moduleSystem: 'commonjs',
 };
 
 module.exports = config;
+
+

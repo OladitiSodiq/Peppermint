@@ -9,12 +9,15 @@ export class ApiKeyService {
 
     const rawKey = generateApiKey();
     const keyHash = await hashValue(rawKey);
+    const expiresAt = new Date();
+    expiresAt.setFullYear(expiresAt.getFullYear() + 1); 
 
     const apiKey = await ApiKey.create({
       userId,
       name,
       keyHash,
       last4: rawKey.slice(-4),
+      expiresAt
     });
 
     return { apiKey, rawKey };
